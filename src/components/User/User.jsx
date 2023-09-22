@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export const User = ({ user }) => {
   const { id, name, email, phone } = user;
   return (
@@ -7,6 +7,10 @@ export const User = ({ user }) => {
       <h2>{name}</h2>
       <p>Email : {email}</p>
       <p>phone : {phone}</p>
+
+      <Link to={`/user/${id}`}>
+        <button className=" bg-amber-200">Show Details!</button>
+      </Link>
     </div>
   );
 };
