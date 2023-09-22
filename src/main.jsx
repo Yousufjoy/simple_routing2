@@ -10,11 +10,13 @@ import Users from "./components/Users/Users";
 import UserDetail from "./components/UserDetail/UserDetail";
 import Posts from "./components/Posts/Posts";
 import PostDetails from "./components/PostDetails/PostDetails";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       { path: "/about", element: <About></About> },
       {
@@ -52,7 +54,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-// 3ta kaj korte hobe
-// 1)component banano
-// 2)Kon route e gele etake dekhabe
-// 3) Link diye click korle dekhabe eita banate hobe
